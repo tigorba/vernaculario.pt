@@ -329,7 +329,7 @@ padding-top: 10px;
 
 #presentes p {
     color: #54846c;
-    font-size: 17px;
+    font-size: 12px;
 }
 
 /*============================
@@ -444,6 +444,7 @@ h3 {
 
 p {
     color: black;
+    font-size: 12px;
 }
 
 #area {
