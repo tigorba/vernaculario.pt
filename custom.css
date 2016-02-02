@@ -443,7 +443,7 @@ h3 {
 }
 
 p {
-    color: #1F563E;
+    color: black;
 }
 
 #area {
@@ -454,7 +454,7 @@ img.media-object {
 }
 
 .nos-wrapper p {
-    font-size: 23px;
+    font-size: 12px;
     font-weight: 900;
 }
 
@@ -490,5 +490,5 @@ img.vegas-background {
 
 #festa p {
     color: #54846c;
-    font-size: 17px;
+    font-size: 12px;
 }
