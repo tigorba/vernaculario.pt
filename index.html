@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 <meta name="description" content="" />
 <meta name="author" content="" />
+<script src="jquery-2.2.1.min.js"></script>
+
 <!--[if IE]>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <![endif]-->
@@ -135,9 +137,7 @@
             
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <div class="nos-wrapper" id="title" style="text-align:center;">
-                    <h3>Programa de 6ª feira à noite</h3>
-                    <img class="media-object" id="area" src="assets/img/night.png" style="display:inline;" alt="...">
-                    
+                    <ul id="answers"></ul>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
@@ -385,6 +385,27 @@
 <!--CONTACT SECTION END-->
 
 <!-- JAVASCRIPT FILES PLACED AT THE BOTTOM TO REDUCE THE LOADING TIME -->
+
+<script>
+$(document).ready(function() {
+    var answers_ul = $('#answers');
+
+    var request_data = {
+                key: 'c528c6a895adff390f6412af5504e159aa45a276', 
+                completed: true
+            };
+    $.getJSON('https://api.typeform.com/v0/form/uCRpFi',  
+            request_data
+
+            ).done(function(data) {
+        for(var i=0; i < data.responses.length; i++) {
+            var response = data.responses[i];
+            answers_ul.append($('<li>' + response.answers.textfield_16332597 + '</li>'))
+        }
+
+    });
+});
+</script>
 <!-- CORE JQUERY -->
 <script src="assets/js/jquery-1.11.1.js"></script>
 <!-- BOOTSTRAP SCRIPTS -->
